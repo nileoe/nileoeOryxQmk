@@ -1,4 +1,6 @@
+# BO custom QMK
 KEY_OVERRIDE_ENABLE = yes
+REPEAT_KEY_ENABLE = yes
 
 # EO custom QMK
 CONSOLE_ENABLE = no
