@@ -17,6 +17,17 @@ enum custom_keycodes {
   ST_MACRO_9,
 };
 
+// BO custom QMK
+const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
+    LAYOUT(
+        'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
+        'L', '*', '*', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
+        'L', 'L', 'L', 'L', 'L', 'L',  '*', '*', '*', '*', 'R', 'R', 
+        'L', '*', '*', '*', '*', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
+                            '*', '*',  '*', '*'
+    );
+// EO custom QMK
+
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
