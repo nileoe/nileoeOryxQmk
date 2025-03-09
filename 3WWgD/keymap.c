@@ -13,14 +13,31 @@ enum custom_keycodes {
   ST_MACRO_5,
 };
 
+// BO custom QMK
+const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
+    LAYOUT(
+        'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
+        'L', '*', '*', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
+        'L', 'L', 'L', 'L', 'L', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
+        'L', '*', '*', '*', '*', 'L',  'R', 'R', 'R', 'R', 'R', 'R', 
+                            '*', '*',  '*', '*'
+    );
 
+const key_override_t delete_key_override = 
+    ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
+
+const key_override_t **key_overrides = (const key_override_t *[]){
+	&delete_key_override,
+	NULL
+};
+// EO custom QMK
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
     KC_ESCAPE,      KC_BRIGHTNESS_DOWN,KC_BRIGHTNESS_UP,KC_NO,          RGB_VAD,        RGB_VAI,                                        KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          
     KC_SPACE,       KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,                                           KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_EXLM,        
     CW_TOGG,        KC_A,           MT(MOD_LALT, KC_S),MT(MOD_LCTL, KC_D),MT(MOD_LSFT, KC_F),MT(MOD_LGUI, KC_G),                                MT(MOD_RGUI, KC_H),MT(MOD_RSFT, KC_J),MT(MOD_RCTL, KC_K),MT(MOD_RALT, KC_L),KC_SCLN,        RALT(KC_QUOTE), 
-    KC_NO,          KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                           KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_NO,          
+    QK_REPEAT_KEY,  KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                           KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       QK_REPEAT_KEY,          
                                                     KC_BSPC,        LT(1,KC_ENTER),                                 LT(2,KC_ESCAPE),KC_SPACE
   ),
   [1] = LAYOUT_voyager(
