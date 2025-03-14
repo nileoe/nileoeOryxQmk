@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [3] = LAYOUT_voyager(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_NO,          KC_F7,          KC_F8,          KC_F9,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          
-    KC_TRANSPARENT, KC_F10,         KC_F4,          KC_F5,          KC_F6,          KC_NO,                                          KC_LEFT_GUI,    KC_LEFT_SHIFT,  KC_LEFT_CTRL,   KC_LEFT_ALT,    KC_NO,          KC_NO,          
+    KC_TRANSPARENT, KC_F10,         KC_F4,          KC_F5,          KC_F6,          KC_NO,                                          KC_LEFT_ALT,    KC_LEFT_SHIFT,  KC_LEFT_CTRL,   KC_LEFT_GUI,    KC_NO,          KC_NO,          
     KC_TRANSPARENT, KC_NO,          KC_F1,          KC_F2,          KC_F3,          KC_NO,                                          KC_NO,          KC_F11,         KC_F12,         KC_F13,         KC_NO,          KC_NO,          
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
@@ -60,12 +60,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 };
 
-const uint16_t PROGMEM combo0[] = { MT(MOD_LSFT, KC_F), MT(MOD_LCTL, KC_D), KC_NO, COMBO_END};
-const uint16_t PROGMEM combo1[] = { MT(MOD_RSFT, KC_J), KC_SPACE, COMBO_END};
+const uint16_t PROGMEM combo0[] = { MT(MOD_RSFT, KC_J), KC_SPACE, COMBO_END};
+const uint16_t PROGMEM combo1[] = { LT(1,KC_ENTER), MT(MOD_LSFT, KC_F), MT(MOD_LCTL, KC_D), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-    COMBO(combo0, OSL(3)),
-    COMBO(combo1, OSL(5)),
+    COMBO(combo0, OSL(5)),
+    COMBO(combo1, OSL(3)),
 };
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
