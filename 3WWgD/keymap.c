@@ -26,7 +26,7 @@ const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
 const key_override_t delete_key_override = 
     ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
 const key_override_t gpb_key_override = 
-    ko_make_basic(MOD_MASK_SHIFT, KC_DLR, RSFT(KC_RALT(KC_4)));
+    ko_make_basic(MOD_MASK_SHIFT, KC_DLR, RSFT(RALT(KC_4)));
 
 const key_override_t **key_overrides = (const key_override_t *[]){
 	&delete_key_override,
@@ -44,11 +44,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                     QK_REPEAT_KEY,  LT(1,KC_ENTER),                                 LT(2,KC_ESCAPE),KC_SPACE
   ),
   [1] = LAYOUT_voyager(
-    _______, _______,        _______,        _______,        _______,        _______,                                        _______,        _______,        _______,        _______,        _______,        _______, 
-    _______, KC_PERC,        KC_7,           KC_8,           KC_9,           KC_AMPR,                                        KC_LCBR,        KC_UNDS,        KC_ASTR,        KC_DLR,         KC_RCBR,        _______, 
-    _______, KC_0,           KC_4,           KC_5,           KC_6,           KC_TAB,                                         KC_LPRN,        KC_MINUS,       KC_PLUS,        KC_EQUAL,       KC_RPRN,        _______, 
-    _______, KC_BSLS,        KC_1,           KC_2,           KC_3,           KC_PIPE,                                        KC_LBRC,        RALT(KC_GRAVE), RALT(RSFT(KC_GRAVE)),LSFT(KC_3),KC_RBRC,   _______, 
-                                                    _______, _______,                                               _______, _______
+    _______, 	    _______,        _______,        _______,        _______,        _______,                                        _______,        _______,        _______,        _______,        _______,        _______, 
+    _______, 	    KC_PERC,        KC_7,           KC_8,           KC_9,           KC_AMPR,                                        KC_LCBR,        KC_UNDS,        KC_ASTR,        KC_DLR,         KC_RCBR,        _______, 
+    _______, 	    KC_0,           KC_4,           KC_5,           KC_6,           KC_TAB,                                         KC_LPRN,        KC_MINUS,       KC_PLUS,        KC_EQUAL,       KC_RPRN,        _______, 
+    _______, 	    KC_BSLS,        KC_1,           KC_2,           KC_3,           KC_PIPE,                                        KC_LBRC,        RALT(KC_GRAVE), RALT(RSFT(KC_GRAVE)),LSFT(KC_3),KC_RBRC,        _______, 
+                                                                    _______, _______,                                               _______, _______
   ),
   [2] = LAYOUT_voyager(
     _______, _______, _______, _______, _______, _______,                                 _______, _______, _______, _______, _______, _______, 
