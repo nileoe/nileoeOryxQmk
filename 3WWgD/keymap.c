@@ -28,7 +28,7 @@ const key_override_t delete_key_override =
 const key_override_t gpb_key_override = 
     ko_make_basic(MOD_MASK_SHIFT, KC_DLR, RSFT(RALT(KC_4)));
 const key_override_t euro_key_override = 
-    ko_make_basic(MOD_MASK_SA, KC_DLR, RALT(KC_5));
+    ko_make_basic(RSHIFT, KC_8, RALT(KC_5));
 
 const key_override_t **key_overrides = (const key_override_t *[]){
 	&delete_key_override,
