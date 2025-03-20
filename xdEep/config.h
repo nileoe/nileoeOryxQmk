@@ -1,3 +1,7 @@
+// BO custom QMK
+#define CHORDAL_HOLD
+// EO custom QMK
+//
 #undef TAPPING_TERM
 #define TAPPING_TERM 160
 
