@@ -27,8 +27,6 @@ const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
                             'L', '*',  '*', 'R'
     );
 
-const key_override_t delete_key_override = 
-    ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
 const key_override_t gpb_key_override = 
     ko_make_basic(MOD_MASK_SHIFT, KC_DLR, RSFT(RALT(KC_4)));
 const key_override_t euro_key_override = 
