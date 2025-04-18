@@ -4,7 +4,7 @@
 #define PERMISSIVE_HOLD
 
 #define USB_SUSPEND_WAKEUP_DELAY 0
-#define SERIAL_NUMBER "xdEep/bvg9bg"
+#define SERIAL_NUMBER "xdEep/6a4jnL"
 #define LAYER_STATE_8BIT
 #define COMBO_COUNT 2
 
