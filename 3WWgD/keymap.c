@@ -8,6 +8,9 @@ enum custom_keycodes {
   ST_MACRO_0,
   ST_MACRO_1,
   ST_MACRO_2,
+  ST_MACRO_3,
+  ST_MACRO_4,
+  ST_MACRO_5,
 };
 
 // BO custom QMK
